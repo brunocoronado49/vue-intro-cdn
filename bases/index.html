@@ -8,13 +8,10 @@
 </head>
 <body>
     <div id="myApp">
-        <h1>Batman Quotes</h1>
-        <ul>
-            <li v-for="{author, quote} in quotes">
-                <span>{{ quote }}</span>
-                <blockquote>{{ author }}</blockquote>
-            </li>
-        </ul>
+        <h3>{{ quote }}</h3>
+        <blockquote>- {{ author }}</blockquote>
+
+        <button v-on:click="changeQuote">Change quote</button>
     </div>
     <script src="./app.js"></script>
 </body>
