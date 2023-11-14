@@ -13,6 +13,15 @@ const app = Vue.createApp({
     data() {
         return {
             quotes,
+            newQuote: 'Hello world'
+        }
+    },
+    methods: {
+        addQuote(event) {
+            if (event.key === 'Enter') {
+                this.newQuote = event.target.value
+                this.quotes.unshift({ quote: this.newQuote, author: 'Francisco' })
+            }
         }
     }
 })
